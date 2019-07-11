@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .common {
+      width: 200px;
+      height: 100px;
+      background: #fff;
+      border: 1px solid #ccc;
+      margin-bottom: 50px;
+    }
+    .outer-1{
+      margin-top: 50px;
+      position: relative;
+    }
+    .outer-1::before{
+      content: "";
+      position: absolute;
+      border-left: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-right: 10px solid transparent;
+      /* border-bottom: 10px solid transparent; */
+      border-bottom: 10px solid gray;
+      /* transform: rotateZ(45deg); */
+      left: 10px;
+      top: -20px;
+    }
+    .outer-2{
+      position: relative;
+    }
+    .outer-2::before{
+      content: "";
+      position: absolute;
+      border-top: 10px solid red;
+      border-right: 10px solid red;
+      border-left: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      right: 0;
+      top: 0;
+    }
+    .outer-3{
+      position: relative;
+    }
+    .outer-3::before{
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      transform: rotateZ(45deg);
+      border-left: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      position: absolute;
+      top: -6px;
+      left: 6px;
+      background: #fff;
+    }
+    /* .outer-1 {
+      position: relative;
+      width: 200px;
+      height: 100px;
+      border: 1px solid #000;
+      background: #fff;
+      margin: 100px;
+    } */
+    /* .outer-1::before{
+      content: "";
+      display: inline-block;
+      border-left: 5px solid gray;
+      border-top: 5px solid gray;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      transform: rotateZ(45deg);
+      position: absolute;
+      top: -6px;
+      left: 10px;
+    }
+    .outer-2{
+      width: 200px;
+      height: 100px;
+      border: 1px solid #000;
+      background: #fff;
+      margin: 200px;
+    } */
+  </style>
+</head>
+<body>
+  <div class="common outer-1"></div>
+  <div class="common outer-2"></div>
+  <div class="common outer-3"></div>
+  </div>
+</body>
+</html>
